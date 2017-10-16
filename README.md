@@ -1,0 +1,1 @@
+xenForo-addon-MinecraftAvatars
