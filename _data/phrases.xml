@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="minecraftavatars_account_details_h2" version_id="1000070" version_string="1.0.0"><![CDATA[Minecraft]]></phrase>
+  <phrase title="minecraftavatars_account_details_is_using_minecraft_avatar_label" version_id="1000070" version_string="1.0.0"><![CDATA[Use skin head as avatar]]></phrase>
+  <phrase title="minecraftavatars_account_details_username" version_id="1000070" version_string="1.0.0"><![CDATA[Username]]></phrase>
+  <phrase title="minecraftavatars_account_details_username_explanation" version_id="1000070" version_string="1.0.0"><![CDATA[Enter your <strong>Minecraft username</strong>, not Mojang account email!]]></phrase>
+  <phrase title="minecraftavatars_account_reload_skin" version_id="1000070" version_string="1.0.0"><![CDATA[Reload skin]]></phrase>
+  <phrase title="minecraftavatars_account_reload_skin_explain" version_id="1000070" version_string="1.0.0"><![CDATA[Skin automatically reloads after every signing in. But you can do it directly.]]></phrase>
+  <phrase title="minecraftavatars_account_reload_skin_success" version_id="1000070" version_string="1.0.0"><![CDATA[Skin has been successfully reloaded!]]></phrase>
+  <phrase title="minecraftavatars_api_status_red_error" version_id="1000070" version_string="1.0.0"><![CDATA[Can't check your Minecraft username! Mojang API services are down. Please try again later.]]></phrase>
+  <phrase title="minecraftavatars_cant_access_skin" version_id="1000070" version_string="1.0.0"><![CDATA[Due to Mojang API services connection restrictions please wait at least 1 minute and try again.]]></phrase>
+  <phrase title="minecraftavatars_incorrect_username" version_id="1000070" version_string="1.0.0"><![CDATA[There is no official Minecraft users with given username!]]></phrase>
+</phrases>

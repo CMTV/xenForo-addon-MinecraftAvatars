@@ -1,0 +1,9 @@
+{
+    "template": "core_avatar.less",
+    "description": "Adding 'image-rendering: pixelated' to all Minecraft avatars",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": ".avatar\n{",
+    "replace": ".avatar {\n\t&.minecraft-avatar {\n\t\timage-rendering: pixelated;\n\t\t-ms-interpolation-mode: nearest-neighbor;\n\t}\n\t&.minecraft-head-thumb {\n\t\twidth: 32px;\n\t\theight: 32px;\n\t}"
+}

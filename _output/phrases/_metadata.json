@@ -1,0 +1,62 @@
+{
+    "minecraftavatars_account_details_h2.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "e3416675e3a20772d0b78f45f4ce995d"
+    },
+    "minecraftavatars_account_details_is_using_minecraft_avatar_label.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "b491bbba6bf5eb3bf812e052ba0b4d26"
+    },
+    "minecraftavatars_account_details_username.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "f6039d44b29456b20f8f373155ae4973"
+    },
+    "minecraftavatars_account_details_username_explanation.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "ee0f5a3fd7f1f905f8456590e5c1bdfc"
+    },
+    "minecraftavatars_account_reload_skin.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "65ae280903a135605610ac1b27a8f435"
+    },
+    "minecraftavatars_account_reload_skin_explain.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "803a2b9d748343b48a716aa8f0e67432"
+    },
+    "minecraftavatars_account_reload_skin_success.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "11aa83cd2adc9c2b2e29fc9a4439f2b3"
+    },
+    "minecraftavatars_api_status_red_error.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "10a8b96a9843322510552a4302d13cf1"
+    },
+    "minecraftavatars_cant_access_skin.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "556eac951a4b4da63f87fb71460eb45d"
+    },
+    "minecraftavatars_incorrect_username.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "35d69bae6660cd99f563d3f4f61b4e77"
+    }
+}

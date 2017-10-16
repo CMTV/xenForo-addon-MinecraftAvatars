@@ -1,0 +1,1 @@
+Skin automatically reloads after every signing in. But you can do it directly.

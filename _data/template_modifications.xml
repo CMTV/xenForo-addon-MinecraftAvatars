@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="account_details" modification_key="minecraftavatars_account_details" description="Adding Minecraft related fields (username, checkbox for using skin as avatar)" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:editorrow name="about" value="{$xf.visitor.Profile.about_}" previewable="0"
+					maxlength="{{ max_length($xf.visitor.Profile, 'about') }}"
+					label="{{ phrase('about_you') }}"/>
+			</xf:if>
+		</div>]]></find>
+    <replace><![CDATA[$0
+
+<h2 class="block-formSectionHeader"><span class="block-formSectionHeader-aligner">{{ phrase('minecraftavatars_account_details_h2') }}</span></h2>
+<div class="block-body">
+	
+	<!-- Minecraft username textbox -->
+	<xf:textboxrow name="minecraftavatars[username]" value="{$xf.visitor.minecraftavatars_username}"
+				   maxlength="20"
+				   class="minecraftavatars_username"
+				   label="{{ phrase('minecraftavatars_account_details_username') }}"
+				   explain="{{ phrase('minecraftavatars_account_details_username_explanation') }}" />
+	
+	<!-- Use skin head as avatar -->
+	<xf:checkboxrow>
+		<xf:option name="minecraftavatars[use_head_as_avatar]" checked="{$xf.visitor.minecraftavatars_use_skin}"
+				class="minecraftavatars_use_skin_checkbox"
+				   label="{{ phrase('minecraftavatars_account_details_is_using_minecraft_avatar_label') }}">
+		</xf:option>
+	</xf:checkboxrow>
+	
+	<!-- Reload skin -->
+	<xf:if is="{$xf.visitor.minecraftavatars_username}">
+		<xf:formrow explain="{{ phrase('minecraftavatars_account_reload_skin_explain') }}">
+			<xf:button data-follow-redirects="true" data-force-flash-message="true" href="{{ link('account/reloadSkinHead') }}" class="button--link">{{ phrase('minecraftavatars_account_reload_skin') }}</xf:button>
+		</xf:formrow>
+	</xf:if>
+</div>
+
+<script>
+	window.onload = function() {
+		
+		var minecraftavatars_input = jQuery('.minecraftavatars_username');
+		var minecraftavatars_checkbox = jQuery('.minecraftavatars_use_skin_checkbox');
+		
+		var minecraftavatars_checkbox_disable = function(username) {
+			if(username.length === 0) {
+				minecraftavatars_checkbox.prop('disabled', true);
+			} else {
+				minecraftavatars_checkbox.prop('disabled', false);
+			}
+		};
+		
+		if(minecraftavatars_input.val().length === 0) {
+			minecraftavatars_checkbox.prop('disabled', true);
+		}
+		
+    	minecraftavatars_input.on('change input', function(e) {
+			minecraftavatars_checkbox_disable(jQuery(this).val());
+		});
+		
+  	};
+</script>]]></replace>
+  </modification>
+  <modification type="public" template="core_avatar.less" modification_key="minecraftavatars_core_avatar" description="Adding 'image-rendering: pixelated' to all Minecraft avatars" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[.avatar
+{]]></find>
+    <replace><![CDATA[.avatar {
+	&.minecraft-avatar {
+		image-rendering: pixelated;
+		-ms-interpolation-mode: nearest-neighbor;
+	}
+	&.minecraft-head-thumb {
+		width: 32px;
+		height: 32px;
+	}]]></replace>
+  </modification>
+  <modification type="public" template="member_about" modification_key="minecraftavatars_member_about" description="Displaying user Minecraft username and skin head" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if contentcheck="true">
+				<div class="block-row block-row--separated">
+				<xf:contentcheck>]]></find>
+    <replace><![CDATA[$0
+
+<xf:if is="$user.minecraftavatars_username">
+	<dl class="pairs pairs--columns pairs--fixedSmall minecraftavatars_profile_about_row">
+		<dt>Minecraft</dt>
+		<dd>
+			<div class="minecraftavatars_flex_row">
+				<xf:avatar user="{$user}" size="s" minecraft_avatar="1"/>{$user.minecraftavatars_username}
+			</div>
+		</dd>
+	</dl>
+	<style>
+		.minecraftavatars_profile_about_row dt {
+			vertical-align: middle;
+		}
+		
+		.minecraftavatars_profile_about_row dd .minecraftavatars_flex_row {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		
+		.minecraftavatars_profile_about_row dd .minecraftavatars_flex_row .minecraft-avatar {
+			margin-right: 0.5em;
+		}
+		
+		.minecraftavatars_profile_about_row dd .minecraftavatars_flex_row .minecraft-avatar img {
+			width: 32px;
+			height: 32px;
+		}
+	</style>
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>

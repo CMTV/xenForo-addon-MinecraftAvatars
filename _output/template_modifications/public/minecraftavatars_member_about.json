@@ -1,0 +1,9 @@
+{
+    "template": "member_about",
+    "description": "Displaying user Minecraft username and skin head",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:if contentcheck=\"true\">\n\t\t\t\t<div class=\"block-row block-row--separated\">\n\t\t\t\t<xf:contentcheck>",
+    "replace": "$0\n\n<xf:if is=\"$user.minecraftavatars_username\">\n\t<dl class=\"pairs pairs--columns pairs--fixedSmall minecraftavatars_profile_about_row\">\n\t\t<dt>Minecraft</dt>\n\t\t<dd>\n\t\t\t<div class=\"minecraftavatars_flex_row\">\n\t\t\t\t<xf:avatar user=\"{$user}\" size=\"s\" minecraft_avatar=\"1\"/>{$user.minecraftavatars_username}\n\t\t\t</div>\n\t\t</dd>\n\t</dl>\n\t<style>\n\t\t.minecraftavatars_profile_about_row dt {\n\t\t\tvertical-align: middle;\n\t\t}\n\t\t\n\t\t.minecraftavatars_profile_about_row dd .minecraftavatars_flex_row {\n\t\t\tdisplay: flex;\n\t\t\talign-items: center;\n\t\t\tflex-wrap: wrap;\n\t\t}\n\t\t\n\t\t.minecraftavatars_profile_about_row dd .minecraftavatars_flex_row .minecraft-avatar {\n\t\t\tmargin-right: 0.5em;\n\t\t}\n\t\t\n\t\t.minecraftavatars_profile_about_row dd .minecraftavatars_flex_row .minecraft-avatar img {\n\t\t\twidth: 32px;\n\t\t\theight: 32px;\n\t\t}\n\t</style>\n</xf:if>"
+}

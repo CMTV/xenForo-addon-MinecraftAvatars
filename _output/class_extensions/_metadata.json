@@ -1,0 +1,14 @@
+{
+    "XF-Entity-User_MinecraftAvatars-XF-Entity-User.json": {
+        "hash": "9658610fd341f215a9a1217c733cfaf5"
+    },
+    "XF-Pub-Controller-Account_MinecraftAvatars-XF-Pub-Controller-Account.json": {
+        "hash": "221720ae2f180ddfec80d0b3f65642c0"
+    },
+    "XF-Pub-Controller-Login_MinecraftAvatars-XF-Pub-Controller-Login.json": {
+        "hash": "ac301365f31df5ee2180e51048dc7f7a"
+    },
+    "XF-Template-Templater_MinecraftAvatars-XF-Template-Templater.json": {
+        "hash": "4cac7a02fd6a435414f64de79891abb1"
+    }
+}
